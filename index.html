@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Devliyal — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-bg" id="sidebarBg"></div>
+  <div class="sidebar-top">
+    <div class="avatar-wrap">
+      <img src="img/round_face.jpeg" alt="Saurabh Devliyal" class="avatar">
+    </div>
+    <h1 class="name">Saurabh<br>Devliyal</h1>
+    <p class="role">Developer &amp; Explorer</p>
+  </div>
+
+  <nav class="side-nav">
+    <a href="#about" class="nav-link active" data-section="about"><span>01</span> About</a>
+    <a href="#education" class="nav-link" data-section="education"><span>02</span> Education</a>
+    <a href="#certifications" class="nav-link" data-section="certifications"><span>03</span> Certifications</a>
+    <a href="#projects" class="nav-link" data-section="projects"><span>04</span> Projects</a>
+    <a href="#hobbies" class="nav-link" data-section="hobbies"><span>05</span> Hobbies</a>
+    <a href="#socials" class="nav-link" data-section="socials"><span>06</span> Socials</a>
+    <a href="#contact" class="nav-link" data-section="contact"><span>07</span> Contact</a>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div class="stamp">EST. <span id="year"></span></div>
+  </div>
+</aside>
+
+<main class="content">
+
+  <section id="about" class="panel about-panel about-bg">
+    <h2 class="section-title">About</h2>
+    <p class="lede">I build for the web with care, focusing not only on how things work but also on how they feel.</p>
+    <p class="body-text">
+      My name is Saurabh Devliyal. I'm a developer passionate about transforming ideas into software,
+      whether small scripts or full-scale interfaces. This page is a running record of what I've studied,
+      what I've built, and what I do when I step away from the keyboard.
+    </p>
+    <p class="body-text" style="margin-top: 14px;">
+      Beyond the screen, I seek the same intensity I bring to problem-solving. I'm drawn to adrenaline
+      and the outdoors, happiest when pushing limits on a trail rather than sitting still.
+    </p>
+    <div class="about-meta">
+      <div class="meta-item">
+        <p class="meta-label">Based in</p>
+        <p class="meta-value">Dehradun, India</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Age</p>
+        <p class="meta-value">19</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Gender</p>
+        <p class="meta-value">Male</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Focus</p>
+        <p class="meta-value">Learning Web3</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Status</p>
+        <p class="meta-value">Open for collaboration</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="education" class="panel">
+    <h2 class="section-title">Education</h2>
+    <ul class="timeline" id="educationList">
+      <!-- populated / editable via script.js -->
+    </ul>
+  </section>
+
+  <section id="certifications" class="panel">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="timeline" id="certificationList">
+      <!-- populated via script.js -->
+    </ul>
+  </section>
+
+  <section id="projects" class="panel">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid" id="projectGrid">
+      <!-- populated via script.js -->
+    </div>
+  </section>
+
+  <section id="hobbies" class="panel">
+    <h2 class="section-title">Hobbies &amp; Interests</h2>
+    <div class="hobby-row" id="hobbyRow">
+      <!-- populated via script.js -->
+    </div>
+  </section>
+
+  <section id="socials" class="panel">
+    <h2 class="section-title">Socials</h2>
+    <div class="social-grid" id="socialGrid">
+      <!-- populated via script.js -->
+    </div>
+  </section>
+
+  <div class="trek-banner">
+    <p class="trek-text">I organize group treks with fellow developers.</p>
+    <a href="#contact" class="trek-link">Reach out →</a>
+  </div>
+
+  <section id="contact" class="panel contact-panel">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="body-text">Have a project in mind, or just want to say hello? Send a message below.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" required placeholder="Say hello..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+
+    <p class="footer-note">© <span id="year2"></span> Saurabh Devliyal. Built with HTML, CSS &amp; JS.</p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
